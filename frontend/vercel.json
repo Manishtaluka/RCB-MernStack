@@ -1,8 +1,6 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.js"
-        }
-    ]
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://rcb-mernstack.onrender.com/api/:path*" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
