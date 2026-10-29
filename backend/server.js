@@ -25,7 +25,9 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/matches", matchRoutes);
 app.use("/api/posts", postRoutes);
 
-app.get("/api/health", (req, res) => res.json({ status: "ok" }));
+app.get("/", (req, res) => {
+  res.json({ message: "Server is running!" });
+});
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
